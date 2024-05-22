@@ -1,0 +1,40 @@
+.edit,
+.inactivar{
+    color: #fff;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.edit{
+    background: #1679e2;
+}
+
+.inactivar{
+    background: #ff0000;
+    border: none;
+    margin-left: 3px;
+}
+
+.activar{
+    background: #1679e2;
+    padding: 8px 12px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tabla{
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla td,
+.tabla th{
+    border-bottom: 1px solid #ccc;
+    padding: 12px 16px;
+}
+
+.tabla tr:hover{
+    background: #ebeaea;
+}

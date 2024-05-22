@@ -1,0 +1,72 @@
+.contenedor-form{
+    position: absolute;
+    top: 55px;
+    left: 16%;
+    width: 84%;
+    padding: 20px;
+}
+
+.form-cliente{
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #ccc;
+    box-shadow:  2px 2px 3px #ccc;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-cliente .input-group{
+    display: flex;
+    flex-direction: column;
+    width: 46%; 
+    margin-bottom: 20px;
+}
+
+.form-cliente .input-group label{
+    font-size: 14px;
+    color: #4a4949;
+    margin-bottom: 3px;
+}
+
+.form-cliente .input-group input,
+.form-cliente .input-group select{
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 2px;
+}
+
+.input-group .cliente-envio option:first-child{
+    display: none;
+}
+
+.contenedor-btn{
+    width: 100%;
+    text-align: center;
+}
+
+.btn-enviar{
+    padding: 10px 20px;
+    color: #fff;
+    background: #1679e2;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover{
+    opacity: .9;
+}
+
+.error{
+    font-size: 11px;
+    color: red;
+}
+
+.exito{
+    color: #0abd58;
+    font-size: 11px;
+}

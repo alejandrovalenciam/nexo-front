@@ -1,0 +1,52 @@
+.contenedor-info{
+    position: absolute;
+    top: 55px;
+    left: 16%;
+    width: 84%;
+    padding: 20px;
+}
+
+.opciones{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.crear-cliente{
+    display: flex;
+    width: 180px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    background: #1679e2;
+    margin-right: 30px ;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 14px;
+    justify-content: center;
+
+}
+
+.activar-cliente{
+    display: flex;
+    width: 180px; 
+    padding: 10px 15px; 
+    text-decoration: none;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 14px;
+    justify-content: center;
+    color: #1679e2;
+    border: 1px solid #1679e2;
+}
+
+.crear-cliente:hover{
+    opacity: .9;
+}
+
+.bxs-user-plus,
+.bxs-user-check{
+    font-size: 25px;
+    margin-right: 3px;
+}
+

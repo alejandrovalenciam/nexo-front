@@ -1,0 +1,26 @@
+.contenedor-envio{
+    position: absolute;
+    top: 55px;
+    left: 16%;
+    width: 84%;
+    padding: 20px;
+}
+
+.contenedor-envio .bxs-box{
+    font-size: 22px;
+    margin-right: 3px;
+}
+
+.crear-envio{
+    display: flex;
+    width: 180px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    background: #1679e2;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 14px;
+    justify-content: center;
+}
