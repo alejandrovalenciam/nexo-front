@@ -1,93 +1,75 @@
 .barra-lateral {
-  width: 16%;
+  width: 20%;
   min-height: 100vh;
-  background: #105aa8;
-  transition: width 0.5s ease;
-}
-
-.mini-barra {
-  width: 67px;
-}
-
-.barra-lateral span {
-  font-size: 18px;
-  text-align: left;
-  margin-left: 5px;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-  color: #fff;
-}
-
-.barra-lateral .nombre-pagina span.oculto {
-  opacity: 0;
-}
-
-.nombre-pagina .bxs-cloud {
-  color: #fff;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  box-shadow: 1px 3px 2px #ccc;
 }
 
 .barra-lateral .nombre-pagina {
   width: 100%;
-  height: 51.5px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: #1679e2;
+  margin: 7px 0 20px 0;
 }
 
 .barra-lateral .nombre-pagina i {
-  min-width: 50px;
   font-size: 40px;
-  cursor: pointer;
-  margin-left: 5px;
+  color: #000;
 }
 
 .barra-lateral .nombre-pagina span {
-  margin-left: 5px;
   font-size: 25px;
-  color: #fff;
+  color: #000;
+  font-weight: bold;
 }
 
 /**navegacion**/
 
-.barra-lateral .navegacion{
-padding-top: 20px;
-}
-
 .barra-lateral .navegacion li {
   list-style: none;
-  display: flex;
-  margin-bottom: 3px;
+  margin-bottom: 20px;
 }
 
-.barra-lateral .navegacion .enlaces {
+.barra-lateral .enlaces {
   width: 100%;
   height: 45px;
   display: flex;
   align-items: center;
   text-decoration: none;
-  border-radius: 10px;
-  color: #fff;
+  color: #000;
 }
 
-.barra-lateral .navegacion i {
-  min-width: 50px;
+.barra-lateral  i {
   font-size: 25px;
   cursor: pointer;
-  color: #fff;
-  margin-left: 5px;
-}
-
-.barra-lateral .navegacion li:hover {
-  color: rgb(0, 0, 0);
-  border-bottom: 1px solid #fff;
-}
-
-.barra-lateral .navegacion .enlaces:hover {
-  /* background-color: rgba(255, 255, 255,.5); */
   color: #000;
-  /* opacity: .5; */
+  margin: 0 7px 0 15px;
 }
 
-.barra-lateral .navegacion span.oculto {
-  opacity: 0;
+
+.barra-lateral .navegacion li:hover .enlaces,
+.barra-lateral .navegacion li:hover i{
+  color: #b81ae8;
 }
+
+.salir{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+.salir i{
+  color: #000;
+}
+
+.salir:hover i,
+.salir:hover span{
+  color: #b81ae8;
+}
+
+

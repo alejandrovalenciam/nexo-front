@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Menu } from '../Menu/Menu'
-import { Encabezado } from '../Encabezado/Encabezado'
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 export const FormEnvio = () => {
 
     const { id } = useParams();
+    const navigate = useNavigate();
     const [clientes, setClientes] = useState([]);
     const [envio, setEnvio] = useState({
         fechaEnvio: "",
@@ -25,11 +26,10 @@ export const FormEnvio = () => {
             axios.get("http://localhost:8080/clientes?estado=activo")
             .then(({ data }) => setClientes(data));
         }
-      
         cargarClientes();
 
-        const buscarEnvio = async () => {
-            await axios.get(`http://localhost:8080/envios/${id}`)
+        const buscarEnvio =  () => {
+            axios.get(`http://localhost:8080/envios/${id}`)
             .then(({data}) => setEnvio(data))
             .catch(() => console.log("envio no encontrado"));
         }
@@ -41,8 +41,8 @@ export const FormEnvio = () => {
     const agregarEnvio = (envio) => {
         axios.post("http://localhost:8080/envios/agregar", envio)
         .then(() => {
-            alert("Envio guardado");
-            window.location.href = "/envios";
+            Swal.fire("Éxito", "Envío guardado", "success");
+            navigate("/envios");
         })
         .catch((err) => alert("Envio no guardado",err.message));
     }
@@ -50,9 +50,9 @@ export const FormEnvio = () => {
     return (
         <>
             <Menu />
-            <Encabezado />
 
             <div className="contenedor-form">
+                <h2 className='titulo'>{id ? 'Editar' : 'Crear'} cliente</h2>
                 <Formik
                     enableReinitialize={true}
                     initialValues={{

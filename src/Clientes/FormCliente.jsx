@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Menu } from '../Menu/Menu';
-import { Encabezado } from '../Encabezado/Encabezado';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import './formCliente.css';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 export const FormCliente = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [cliente, setCliente] = useState({
     numeroDocumento: "",
     nombre: "",
@@ -24,8 +25,8 @@ export const FormCliente = () => {
   const agregarCliente = (cliente) => {
     axios.post("http://localhost:8080/clientes/agregar", cliente)
     .then(() => {
-      alert("Cliente guardado");
-      window.location.href = "/clientes";
+      Swal.fire("Éxito", "Cliente guardado", "success");
+      navigate("/clientes");
     })
     .catch(() => alert("Cliente no guardado"));
   }
@@ -33,8 +34,7 @@ export const FormCliente = () => {
   useEffect(() => {
     const buscarCliente =  () => {
       axios.get(`http://localhost:8080/clientes/${id}`)
-      .then(({data}) => setCliente(data))
-      .catch(() => console.log("cliente no encontrado"));
+      .then(({data}) => setCliente(data));
     }
     if(id !== undefined){
       buscarCliente();
@@ -45,9 +45,9 @@ export const FormCliente = () => {
   return (
     <>
       <Menu />
-      <Encabezado />
 
       <div className="contenedor-form">
+      <h2 className='titulo'>{id ? 'Editar' : 'Crear'} cliente</h2>
         <Formik 
           enableReinitialize={true}
           initialValues={{
@@ -185,6 +185,18 @@ export const FormCliente = () => {
               </div>
 
               <div className="input-group">
+                <label htmlFor="pais">País:</label>
+                <Field
+                  type="text"
+                  id='pais'
+                  name='pais'
+                />
+                <ErrorMessage name='pais' component={() => (
+                  <div className='error'>{errors.pais}</div>
+                )} />
+              </div>
+              
+              <div className="input-group">
                 <label htmlFor="ciudad">Ciudad:</label>
                 <Field
                   type="text"
@@ -196,17 +208,6 @@ export const FormCliente = () => {
                 )} />
               </div>
 
-              <div className="input-group">
-                <label htmlFor="pais">País:</label>
-                <Field
-                  type="text"
-                  id='pais'
-                  name='pais'
-                />
-                <ErrorMessage name='pais' component={() => (
-                  <div className='error'>{errors.pais}</div>
-                )} />
-              </div>
 
               <div className="input-group">
                 <label htmlFor="telefono">Teléfono:</label>
@@ -214,6 +215,7 @@ export const FormCliente = () => {
                   type="text"
                   id='telefono'
                   name='telefono'
+                  maxLength="11"
                 />
                 <ErrorMessage name='telefono' component={() => (
                   <div className='error'>{errors.telefono}</div>

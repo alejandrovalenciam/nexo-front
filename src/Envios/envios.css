@@ -1,8 +1,7 @@
 .contenedor-envio{
     position: absolute;
-    top: 55px;
-    left: 16%;
-    width: 84%;
+    left: 20%;
+    width: 80%;
     padding: 20px;
 }
 
@@ -13,7 +12,7 @@
 
 .crear-envio{
     display: flex;
-    width: 180px;
+    width: 200px;
     padding: 10px 15px;
     text-decoration: none;
     color: #fff;
@@ -23,4 +22,8 @@
     align-items: center;
     font-size: 14px;
     justify-content: center;
+}
+
+.crear-envio:hover{
+    background: #0056b3;
 }

@@ -12,7 +12,7 @@ export const Menu = () => {
                 <ul>
                     <li>
                         <Link to="" className='enlaces'>
-                            <i className='bx bxs-home-alt-2'></i>
+                            <i className='bx bxs-home'></i>
                             <span>Inicio</span>
                         </Link>
                     </li>
@@ -34,13 +34,14 @@ export const Menu = () => {
                             <span>Envios</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link to={""} className='enlaces'>
-                            <i className='bx bxs-report' ></i>
-                            <span>Reportes</span>
-                        </Link>
-                    </li>
+                    
                 </ul>
+            </div>
+            <div className='salir'>
+                <Link to={"/"} className='enlaces'>
+                    <i className='bx bx-exit' title='Cerrar sesión'></i>
+                    <span>Salir</span>
+                </Link>
             </div>
         </div>
     )

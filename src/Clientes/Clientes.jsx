@@ -1,30 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import { Menu } from '../Menu/Menu';
-import { Encabezado } from '../Encabezado/Encabezado';
 import './clientes.css';
 import axios from 'axios';
 import { Tabla } from '../Tabla/Tabla';
+import Swal from 'sweetalert2';
 
 export const Clientes = () => {
-
   const [clientes, setClientes] = useState([]);
 
   const agregarCliente = (cliente) => {
     axios.post("http://localhost:8080/clientes/agregar", cliente)
       .then(() => {
-        alert("Cliente inactivado");
         window.location.href = "/clientes";
       })
       .catch(() => alert("Cliente no inactivado"));
   }
 
   const inactivarCliente = (inactivarCliente) => {
-    const inactivar = window.confirm("¿Quiere inactivar este cliente?");
-
-    if (inactivar) {
-      inactivarCliente.estado = "inactivo"
-      agregarCliente(inactivarCliente);
-    }
+    Swal.fire({
+      title: "Advertencia",
+      text: "¿Quiere inactivar este cliente?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Aceptar",
+      cancelButtonText: "Cancelar"
+    }).then(result => {
+      if (result.isConfirmed){
+        inactivarCliente.estado = "inactivo";
+        agregarCliente(inactivarCliente);
+      }
+    })
   }
 
   useEffect(() => {
@@ -39,8 +46,8 @@ export const Clientes = () => {
   return (
     <>
       <Menu />
-      <Encabezado />
       <div className="contenedor-info">
+        <h2 className='titulo'>Clientes</h2>
         <div className="opciones">
           <a href="/crear-cliente" className='crear-cliente'>
             <i className='bx bxs-user-plus'></i>

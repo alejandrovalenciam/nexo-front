@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './envios.css'
 import { Menu } from '../Menu/Menu'
-import { Encabezado } from '../Encabezado/Encabezado'
 import axios from 'axios'
 
 export const Envios = () => {
@@ -18,8 +17,8 @@ export const Envios = () => {
     return (
         <>
             <Menu />
-            <Encabezado />
             <div className='contenedor-envio'>
+                <h2 className='titulo'>Envios</h2>
                 <a href="/crear-envio" className='crear-envio'>
                     <i className='bx bxs-box'></i>
                     Crear nuevo envio

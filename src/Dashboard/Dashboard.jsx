@@ -1,4 +1,3 @@
-import { Encabezado } from "../Encabezado/Encabezado"
 import { Menu } from "../Menu/Menu"
 import './dashboard.css'
 
@@ -6,7 +5,6 @@ export const Dashboard = () => {
     return (
         <>
             <Menu />
-            <Encabezado />
 
             <div className="dashboard">
                 <div className="box">

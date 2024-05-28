@@ -29,7 +29,7 @@ export const Tabla = ({ clientes, inactivarCliente, activarCliente }) => {
                         <td>{cliente.telefono}</td>
                         <td>{cliente.correo}</td>
                         <td>
-                            {(cliente.estado == "activo") ?
+                            {(cliente.estado === "activo") ?
                                 <>
                                     <a href={`/editar-cliente/${cliente.id}`} className='edit' title='Editar'>
                                         <i className='bx bxs-edit'></i>
