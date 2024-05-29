@@ -7,13 +7,14 @@ import { FormCliente } from './Clientes/FormCliente';
 import { ClientesInactivos } from './Clientes/ClientesInactivos';
 import { Envios } from './Envios/Envios';
 import { FormEnvio } from './Envios/FormEnvio';
-// import { EditarEnvio } from './Envios/EditarEnvio';
+import { Registro } from './Registro/Registro';
 
 export const App = () => {
 
   return (
     <Routes>
         <Route path='/' element={<Login />} />
+        <Route path='/registro' element={<Registro />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/clientes' element={<Clientes />} />
         <Route path='/crear-cliente' element={<FormCliente />} />

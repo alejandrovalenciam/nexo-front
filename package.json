@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^2.0.4",
+    "@headlessui/tailwindcss": "^0.2.0",
+    "@remixicon/react": "^4.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@tremor/react": "^3.17.2",
     "axios": "^1.6.8",
     "bootstrap-table": "^1.22.5",
     "datatables.net-dt": "^2.0.7",
@@ -19,6 +23,7 @@
     "reactfire": "^4.0.0-rc.2",
     "schema-utils": "^4.2.0",
     "sweetalert2": "^11.11.0",
+    "tailwindcss": "^3.4.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7"
   }
 }

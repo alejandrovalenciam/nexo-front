@@ -13,11 +13,12 @@ export const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await appFirebase.auth().signInWithEmailAndPassword(correo, clave);
-            navigate("/clientes")
+            const user = await appFirebase.auth().signInWithEmailAndPassword(correo, clave);
+            if(user){
+                navigate("/clientes")
+            }
         } catch (error) {
             alert("Tu email o contraseña son incorrectos vuelve a intentarlo")
-            navigate("/")
         }
     }
 
@@ -53,7 +54,7 @@ export const Login = () => {
                         <input type="submit" value="Ingresar" />
                     </div>
 
-                    {/* <a href="#">Crear una cuenta</a> */}
+                    <a href="/registro">Crear una cuenta</a>
                 </form>
             </div>
         </div>

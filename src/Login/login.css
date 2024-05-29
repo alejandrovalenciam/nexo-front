@@ -29,6 +29,11 @@
     height: 200px;
 }
 
+.contenedor .logo i{
+    font-size: 200px;
+    color: #ccc;;
+}
+
 .contenedor .formulario{
     width: 50%;
     text-align: center;
@@ -70,7 +75,7 @@
 }
 
 .contenedor .input-group input[type=submit]:hover{
-    opacity: .9;
+    background: #0056b3;
 }
 
 .contenedor a{
