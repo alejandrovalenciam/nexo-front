@@ -8,6 +8,7 @@ import { ClientesInactivos } from './Clientes/ClientesInactivos';
 import { Envios } from './Envios/Envios';
 import { FormEnvio } from './Envios/FormEnvio';
 import { Registro } from './Registro/Registro';
+import { Home } from './Home/Home';
 
 export const App = () => {
 
@@ -15,6 +16,7 @@ export const App = () => {
     <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/registro' element={<Registro />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/clientes' element={<Clientes />} />
         <Route path='/crear-cliente' element={<FormCliente />} />

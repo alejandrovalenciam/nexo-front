@@ -11,7 +11,7 @@ export const Menu = () => {
             <div className="navegacion">
                 <ul>
                     <li>
-                        <Link to="" className='enlaces'>
+                        <Link to="/home" className='enlaces'>
                             <i className='bx bxs-home'></i>
                             <span>Inicio</span>
                         </Link>
@@ -29,7 +29,7 @@ export const Menu = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/envios"} className='enlaces'>
+                        <Link to="/envios" className='enlaces'>
                             <i className='bx bx-package' ></i>
                             <span>Envios</span>
                         </Link>
@@ -38,7 +38,7 @@ export const Menu = () => {
                 </ul>
             </div>
             <div className='salir'>
-                <Link to={"/"} className='enlaces'>
+                <Link to="/" className='enlaces'>
                     <i className='bx bx-exit' title='Cerrar sesión'></i>
                     <span>Salir</span>
                 </Link>

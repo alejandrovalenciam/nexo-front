@@ -18,7 +18,12 @@ export const Registro = () => {
                 navigate("/")
             }
         } catch (error) {
-            Swal.fire("", "Ya existe un usuario con ese correo", "error");
+            if(correo === '' || clave === ''){
+                document.getElementById("error").innerHTML='Complete todos los campos';
+            }else{
+                document.getElementById("error").innerHTML='';
+                Swal.fire("", "Ya existe un usuario con ese correo", "error");
+            }
         }
     }
 
@@ -60,7 +65,7 @@ export const Registro = () => {
                     <div className="input-group">
                         <input type="submit" value="Registrarse" />
                     </div>
-
+                    <p id='error' className='error-ingreso'></p>
                     <a href="/">Iniciar sesión</a>
                 </form>
             </div>

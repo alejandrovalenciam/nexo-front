@@ -1,0 +1,19 @@
+.card-bar{
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 3px 2px #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    height: 400px;
+}
+
+.descripcion-bar{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}

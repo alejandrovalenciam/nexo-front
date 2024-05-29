@@ -15,10 +15,15 @@ export const Login = () => {
         try {
             const user = await appFirebase.auth().signInWithEmailAndPassword(correo, clave);
             if(user){
-                navigate("/clientes")
+                navigate("/home")
             }
         } catch (error) {
-            alert("Tu email o contraseña son incorrectos vuelve a intentarlo")
+            if(correo === '' || clave === ''){
+                document.getElementById("error").innerHTML='Complete todos los campos';
+            }else{
+                document.getElementById("error").innerHTML= 'Email o contraseña incorrectos';
+            }
+            
         }
     }
 
@@ -53,7 +58,7 @@ export const Login = () => {
                     <div className="input-group">
                         <input type="submit" value="Ingresar" />
                     </div>
-
+                    <p id='error' className='error-ingreso'></p>
                     <a href="/registro">Crear una cuenta</a>
                 </form>
             </div>

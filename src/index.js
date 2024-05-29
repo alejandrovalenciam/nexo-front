@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
 import { FirebaseAppProvider } from "reactfire";
 import firebaseConfig from "./firebaseConfig";
+import { Chart } from 'chart.js/auto';
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

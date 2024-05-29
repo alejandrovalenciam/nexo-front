@@ -1,0 +1,23 @@
+.home{
+    position: absolute;
+    left: 18%;
+    width: 82%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home h1{
+    font-size: 80px;
+    color: #1679e2;
+    margin-top: 80px;
+}
+
+.home .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+}

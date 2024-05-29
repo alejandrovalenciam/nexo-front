@@ -78,6 +78,12 @@
     background: #0056b3;
 }
 
+.contenedor .error-ingreso{
+    color: red;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
 .contenedor a{
     color: #1679e2;
     text-decoration: none;
