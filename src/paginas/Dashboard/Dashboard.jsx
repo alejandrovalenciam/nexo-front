@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { Menu } from "../Menu/Menu"
-import { EnviosCard } from "../componentes/estadisticas/EnviosCard/EnviosCard"
+import { Menu } from '../../componentes/Menu/Menu'
+import { EnviosCard } from "../../componentes/estadisticas/EnviosCard/EnviosCard"
 import './dashboard.css'
 import axios from "axios";
-import { ClientesCard } from "../componentes/estadisticas/ClientesCard/ClientesCard";
-import { CiudadesGrafico } from "../componentes/estadisticas/CiudadesGrafico/CiudadesGrafico";
+import { ClientesCard } from "../../componentes/estadisticas/ClientesCard/ClientesCard";
+import { CiudadesGrafico } from "../../componentes/estadisticas/CiudadesGrafico/CiudadesGrafico";
 
 export const Dashboard = () => {
     const [envios, setEnvios] = useState([]);

@@ -16,7 +16,8 @@
     margin-bottom: 20px;
 }
 
-.crear-cliente{
+.crear-cliente,
+.activar-cliente{
     display: flex;
     width: 200px;
     padding: 10px 15px;
@@ -28,18 +29,11 @@
     align-items: center;
     font-size: 14px;
     justify-content: center;
-
 }
 
 .activar-cliente{
-    display: flex;
     width: 180px; 
-    padding: 10px 15px; 
-    text-decoration: none;
-    border-radius: 5px;
-    align-items: center;
-    font-size: 14px;
-    justify-content: center;
+    background: #fff;
     color: #1679e2;
     border: 1px solid #1679e2;
 }

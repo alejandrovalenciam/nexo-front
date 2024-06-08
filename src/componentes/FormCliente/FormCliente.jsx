@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Menu } from '../Menu/Menu';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import './formCliente.css';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Menu } from '../Menu/Menu';
 
 export const FormCliente = () => {
   const { id } = useParams();

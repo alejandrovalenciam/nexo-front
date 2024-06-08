@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './envios.css'
-import { Menu } from '../Menu/Menu'
+import { Menu } from '../../componentes/Menu/Menu'
 import axios from 'axios'
+import { BotonExportar } from '../../componentes/Exportar/BotonExportar'
 
 export const Envios = () => {
     const [envios, setEnvios] = useState([]);
@@ -19,10 +20,14 @@ export const Envios = () => {
             <Menu />
             <div className='contenedor-envio'>
                 <h2 className='titulo'>Envios</h2>
-                <a href="/crear-envio" className='crear-envio'>
-                    <i className='bx bxs-box'></i>
-                    Crear nuevo envio
-                </a>
+                <div className="opciones">
+                    <a href="/crear-envio" className='crear-envio'>
+                        <i className='bx bxs-box'></i>
+                        Crear nuevo envio
+                    </a>
+                    <BotonExportar datos={envios} nombre={"envios"}/>
+                </div>
+                
                 <table className='tabla'>
                     <thead>
                         <tr>

@@ -2,7 +2,7 @@
     position: absolute;
     left: 18%;
     width: 82%;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .contenedor-envio .bxs-box{
@@ -17,7 +17,7 @@
     text-decoration: none;
     color: #fff;
     background: #1679e2;
-    margin-bottom: 20px;
+    margin-right: 30px;
     border-radius: 5px;
     align-items: center;
     font-size: 14px;

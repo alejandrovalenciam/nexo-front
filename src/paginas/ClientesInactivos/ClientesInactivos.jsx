@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Menu } from '../Menu/Menu'
-import { Tabla } from '../Tabla/Tabla'
+import { Menu } from '../../componentes/Menu/Menu'
+import { Tabla } from '../../componentes/Tabla/Tabla'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 
