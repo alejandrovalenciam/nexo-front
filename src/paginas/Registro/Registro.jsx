@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import appFirebase from '../firebaseConfig';
+import appFirebase from '../../firebaseConfig';
 import Swal from 'sweetalert2';
 
 export const Registro = () => {

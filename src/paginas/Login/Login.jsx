@@ -1,7 +1,7 @@
 import './login.css'
-import logo from '../img/logo.png';
+import logo from '../../img/logo.png';
 import { useState } from 'react';
-import appFirebase from '../firebaseConfig';
+import appFirebase from '../../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {

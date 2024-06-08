@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Menu } from '../Menu/Menu';
+import { Menu } from '../../componentes/Menu/Menu';
 import './clientes.css';
 import axios from 'axios';
-import { Tabla } from '../Tabla/Tabla';
+import { Tabla } from '../../componentes/Tabla/Tabla';
 import Swal from 'sweetalert2';
+import { BotonExportar } from '../../componentes/Exportar/BotonExportar';
 
 export const Clientes = () => {
   const [clientes, setClientes] = useState([]);
@@ -27,7 +28,7 @@ export const Clientes = () => {
       confirmButtonText: "Aceptar",
       cancelButtonText: "Cancelar"
     }).then(result => {
-      if (result.isConfirmed){
+      if (result.isConfirmed) {
         inactivarCliente.estado = "inactivo";
         agregarCliente(inactivarCliente);
       }
@@ -57,44 +58,10 @@ export const Clientes = () => {
             <i className='bx bxs-user-check'></i>
             Activar cliente
           </a>
+
+          <BotonExportar datos={clientes} nombre={"clientes"} />
         </div>
 
-        {/* <table className='tabla'>
-          <thead>
-            <tr>
-              <th>No. documento</th>
-              <th>Nombre</th>
-              <th>Dirección</th>
-              <th>Ciudad</th>
-              <th>País</th>
-              <th>Teléfono</th>
-              <th>Correo</th>
-              <th>Acción</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {clientes.map(cliente => (
-              <tr key={cliente.id}>
-                <td>{cliente.numeroDocumento}</td>
-                <td>{cliente.nombre + ' ' + cliente.apellido}</td>
-                <td>{cliente.direccion}</td>
-                <td>{cliente.ciudad}</td>
-                <td>{cliente.pais}</td>
-                <td>{cliente.telefono}</td>
-                <td>{cliente.correo}</td>
-                <td>
-                  <a href={`/editar-cliente/${cliente.id}`} className='edit' title='Editar'>
-                    <i className='bx bxs-edit'></i>
-                  </a>
-                  <button onClick={() => inactivarCliente(cliente)} className='inactivar' title='Inactivar'>
-                    <i className='bx bxs-trash-alt'></i>
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table> */}
         <Tabla clientes={clientes} inactivarCliente={inactivarCliente} />
       </div>
     </>

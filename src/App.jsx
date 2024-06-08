@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Login } from './Login/Login';
-import { Dashboard } from './Dashboard/Dashboard'
-import { Clientes } from './Clientes/Clientes';
-import { FormCliente } from './Clientes/FormCliente';
-import { ClientesInactivos } from './Clientes/ClientesInactivos';
-import { Envios } from './Envios/Envios';
-import { FormEnvio } from './Envios/FormEnvio';
-import { Registro } from './Registro/Registro';
-import { Home } from './Home/Home';
+import { Login } from './paginas/Login/Login';
+import { Dashboard } from './paginas/Dashboard/Dashboard'
+import { Clientes } from './paginas/Clientes/Clientes';
+import { FormCliente } from './componentes/FormCliente/FormCliente';
+import { ClientesInactivos } from './paginas/ClientesInactivos/ClientesInactivos';
+import { Envios } from './paginas/Envios/Envios';
+import { FormEnvio } from './componentes/FormEnvios/FormEnvio';
+import { Registro } from './paginas/Registro/Registro';
+import { Home } from './paginas/Home/Home';
 
 export const App = () => {
 
